@@ -65,15 +65,26 @@ if (form) {
   });
   syncFood();
 
+  // Safety: no double sends, loading state, 12 s timeout, error fallback that
+  // keeps what the vendor typed, honeypot, blank-only answers rejected.
+  let sending = false;
+  const btn = form.querySelector('button[type="submit"]');
+  const showSuccess = () => {
+    form.style.display = "none";
+    success.classList.add("show");
+    success.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+  const isFilled = (el) =>
+    el.checkValidity() && (el.type === "checkbox" || el.tagName === "SELECT" || el.value.trim() !== "");
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (sending) return;
     errorEl.textContent = "";
 
-    const firstInvalid = [...form.querySelectorAll("[required]")].find((el) => !el.checkValidity());
-    form.querySelectorAll(".is-invalid").forEach((el) => el.classList.remove("is-invalid"));
-    form.querySelectorAll("[required]").forEach((el) => {
-      if (!el.checkValidity()) el.classList.add("is-invalid");
-    });
+    const required = [...form.querySelectorAll("[required]")];
+    const firstInvalid = required.find((el) => !isFilled(el));
+    required.forEach((el) => el.classList.toggle("is-invalid", !isFilled(el)));
     if (firstInvalid) {
       errorEl.textContent =
         firstInvalid.type === "checkbox"
@@ -83,32 +94,41 @@ if (form) {
       return;
     }
 
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.firstChild.textContent = "Sending… ";
+    // Bots fill the hidden field: pretend it worked, send nothing.
+    if (form.querySelector('[name="_honey"]').value) { showSuccess(); return; }
 
     // Combine multi-select checkboxes into one line each
-    const data = new FormData(form);
     const payload = {};
-    for (const [key, value] of data.entries()) {
+    for (const [key, raw] of new FormData(form).entries()) {
+      const value = typeof raw === "string" ? raw.trim() : raw;
       payload[key] = payload[key] ? `${payload[key]}, ${value}` : value;
     }
+
+    sending = true;
+    btn.disabled = true;
+    btn.firstChild.textContent = "Sending… ";
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 12000);
 
     try {
       const res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
+        signal: ctrl.signal,
       });
-      if (!res.ok) throw new Error("Bad response");
-      form.style.display = "none";
-      success.classList.add("show");
-      success.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json().catch(() => ({}));
+      if (json.success === false || json.success === "false") throw new Error(json.message || "Not sent");
+      showSuccess();
     } catch {
       errorEl.innerHTML =
         'Something went wrong sending your application. Please try again, or email us at <a href="mailto:stephanie@cmgproducts.net">stephanie@cmgproducts.net</a>.';
+      sending = false;
       btn.disabled = false;
-      btn.firstChild.textContent = "Send application ";
+      btn.firstChild.textContent = "Try again ";
+    } finally {
+      clearTimeout(timer);
     }
   });
 }

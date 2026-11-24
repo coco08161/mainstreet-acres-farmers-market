@@ -61,30 +61,31 @@
           <form id="vendor-form" action="https://formsubmit.co/stephanie@cmgproducts.net" method="POST" novalidate>
             <input type="hidden" name="_subject" value="New vendor application – Mainstreet Acres Farmers Market">
             <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_captcha" value="false">
 
             <fieldset>
               <legend><span class="num">1</span> About you</legend>
               <div class="fields">
                 <div class="field">
                   <label for="f-name">Your name</label>
-                  <input id="f-name" name="Contact name" type="text" autocomplete="name" required>
+                  <input id="f-name" name="Contact name" type="text" maxlength="120" autocomplete="name" required>
                 </div>
                 <div class="field">
                   <label for="f-business">Business name</label>
-                  <input id="f-business" name="Business name" type="text" autocomplete="organization" required>
+                  <input id="f-business" name="Business name" type="text" maxlength="120" autocomplete="organization" required>
                 </div>
                 <div class="field">
                   <label for="f-email">Email</label>
-                  <input id="f-email" name="email" type="email" autocomplete="email" required>
+                  <input id="f-email" name="email" type="email" maxlength="120" autocomplete="email" required>
                 </div>
                 <div class="field">
                   <label for="f-phone">Phone</label>
-                  <input id="f-phone" name="Phone" type="tel" autocomplete="tel" required>
+                  <input id="f-phone" name="Phone" type="tel" maxlength="30" autocomplete="tel" required>
                 </div>
                 <div class="field full">
                   <label for="f-social">Instagram or website <span class="opt">(optional)</span></label>
-                  <input id="f-social" name="Instagram or website" type="text" placeholder="@yourbusiness or yoursite.com">
+                  <input id="f-social" name="Instagram or website" type="text" maxlength="120" placeholder="@yourbusiness or yoursite.com">
                 </div>
               </div>
             </fieldset>
@@ -107,11 +108,11 @@
                 </div>
                 <div class="field full">
                   <label for="f-products">Tell us about your products</label>
-                  <textarea id="f-products" name="Products" placeholder="What you make or grow, price range, what makes it special…" required></textarea>
+                  <textarea maxlength="2000" id="f-products" name="Products" placeholder="What you make or grow, price range, what makes it special…" required></textarea>
                 </div>
                 <div class="field full food-only" id="food-block">
                   <label for="f-license">Florida license or permit</label>
-                  <input id="f-license" name="Florida license / permit" type="text" placeholder="e.g. Cottage food operation, FDACS permit #, DBPR license #">
+                  <input id="f-license" name="Florida license / permit" type="text" maxlength="120" placeholder="e.g. Cottage food operation, FDACS permit #, DBPR license #">
                   <p class="hint">All food and dairy vendors must comply with applicable Florida regulations and licensing requirements.</p>
                 </div>
               </div>
@@ -146,7 +147,7 @@
                 </div>
                 <div class="field full">
                   <label for="f-notes">Anything else? <span class="opt">(optional)</span></label>
-                  <textarea id="f-notes" name="Notes" style="min-height:90px" placeholder="How you heard about us, questions, special requests…"></textarea>
+                  <textarea maxlength="2000" id="f-notes" name="Notes" style="min-height:90px" placeholder="How you heard about us, questions, special requests…"></textarea>
                 </div>
               </div>
             </fieldset>
