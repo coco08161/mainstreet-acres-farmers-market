@@ -1,93 +1,113 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-intro="1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Farmers Market at Mainstreet Acres | Become a Vendor</title>
   <meta name="description" content="Become a vendor at Mainstreet Acres Farmers Market in Miami's Redland. Every Saturday and Sunday, 10 AM to 3 PM, at 22700 SW 177th Avenue.">
+  <meta property="og:title" content="The Farmers Market at Mainstreet Acres">
+  <meta property="og:description" content="Grow your business. Connect with the community. Every Saturday & Sunday in Miami's Redland.">
+  <meta property="og:image" content="assets/img/hero.webp">
+  <meta name="theme-color" content="#1f3b22">
   <link rel="icon" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..800,0..100,0..1;1,9..144,500..800,0..100,0..1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>(function(){var r=document.documentElement;if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;r.classList.add("anim");try{if(r.dataset.intro==="1"&&!sessionStorage.getItem("msa-intro"))r.classList.add("preload")}catch(e){}setTimeout(function(){if(!window.gsap){r.classList.remove("anim");r.classList.remove("preload")}},3500)})();</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="preloader" aria-hidden="true"><div class="awning"></div><div class="word"><span>Fresh.</span></div></div>
+  <div class="progress" aria-hidden="true"></div>
 
-  <div class="topbar">
-    <div class="wrap topbar-inner">
-      <span class="topbar-hours">Sat &amp; Sun · 10 AM – 3 PM</span>
-      <span class="topbar-contact">
-        <a href="tel:+13052222221">305.222.2221</a>
-        <a href="mailto:stephanie@cmgproducts.net">stephanie@cmgproducts.net</a>
-        <a class="ig" href="https://instagram.com/mainstreetacres" target="_blank" rel="noopener" aria-label="Instagram @mainstreetacres"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-      </span>
+  <div class="chrome">
+    <div class="topbar">
+      <div class="wrap topbar-inner">
+        <span>Sat &amp; Sun · 10 AM – 3 PM<span class="hours-long"> · Redland, Miami</span></span>
+        <span class="topbar-contact">
+          <a href="tel:+13052222221">305.222.2221</a>
+          <a class="email" href="mailto:stephanie@cmgproducts.net">stephanie@cmgproducts.net</a>
+          <a href="https://instagram.com/mainstreetacres" target="_blank" rel="noopener" aria-label="Instagram @mainstreetacres"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </span>
+      </div>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Mainstreet Acres Farmers Market, home"><img src="assets/logo.webp" alt="" width="74" height="49"><span>Mainstreet Acres<small>Farmers Market</small></span></a>
+      <nav class="nav" aria-label="Main">
+        <a class="roll" href="index.html" aria-current="page"><span data-text="Home">Home</span></a>
+        <a class="roll" href="about.html"><span data-text="About">About</span></a>
+        <a class="roll" href="vendors.html"><span data-text="For Vendors">For Vendors</span></a>
+        <a class="roll" href="index.html#visit"><span data-text="Visit">Visit</span></a>
+        <a class="btn btn-hay" href="apply.html" data-magnetic>Apply to vend <span class="arrow" aria-hidden="true">→</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><b>Menu</b><i></i></button>
+    </header>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="index.html" aria-current="page"><small>01</small>Home</a>
+      <a href="about.html"><small>02</small>About</a>
+      <a href="vendors.html"><small>03</small>For Vendors</a>
+      <a href="index.html#visit"><small>04</small>Visit</a>
+      <a href="apply.html"><small>05</small>Apply to vend</a>
+    </nav>
+    <div class="mm-foot">
+      <a href="tel:+13052222221">305.222.2221</a>
+      <span>22700 SW 177th Avenue, Miami, FL 33170</span>
+      <span>Every Saturday &amp; Sunday · 10 AM – 3 PM</span>
     </div>
   </div>
-  <div class="awning" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <nav class="wrap nav" aria-label="Main">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.webp" alt="" width="70" height="46">
-        <span>Mainstreet Acres<small>Farmers Market</small></span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="vendors.html">For Vendors</a></li>
-        <li><a href="index.html#visit">Visit</a></li>
-        <li><a href="apply.html#contact">Contact</a></li>
-        <li><a class="btn btn-primary" href="apply.html">Apply to vend</a></li>
-      </ul>
-    </nav>
-  </header>
 
   <main id="main">
-    <!-- Hero -->
+    <!-- Hero (photo is an Unsplash placeholder: swap for a real market photo) -->
     <section class="hero">
-      <!-- Placeholder stock photo (Unsplash). Swap for a real photo of the market. -->
-      <img class="hero-bg" src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=2000&amp;q=80&amp;auto=format&amp;fit=crop" alt="" width="2000" height="1333">
-      <div class="wrap hero-inner">
-        <p class="eyebrow">Now booking vendors · Redland, Miami</p>
-        <h1>Bring your goods to <span class="script">Mainstreet</span> Acres.</h1>
-        <p class="lede">Grow your business. Connect with the community. Be part of something special, every weekend in the heart of Miami's Redland.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-hay" href="apply.html">Apply to become a vendor <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-light" href="#markets">See market days</a>
+      <div class="hero-bg"><img src="assets/img/hero.webp" alt="" width="1800" height="1201"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker" data-reveal>Now booking vendors · Redland, Miami</p>
+          <h1><span class="line"><span>Bring your goods to</span></span><span class="line"><span><span class="script">Mainstreet</span> Acres.</span></span></h1>
+          <p class="lead" data-reveal>Grow your business. Connect with the community. Be part of something special, every weekend in the heart of Miami's Redland.</p>
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn-hay" href="apply.html" data-magnetic>Apply to become a vendor <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-light" href="#markets">See market days</a>
+          </div>
         </div>
-        <div class="hero-meta">
-          <div><strong>Sat &amp; Sun</strong>Every weekend</div>
-          <div><strong>10 AM – 3 PM</strong>Market hours</div>
-          <div><strong>Redland</strong>22700 SW 177th Ave</div>
-        </div>
+        <aside class="hero-card" data-reveal aria-label="Market details">
+          <span class="hand">Open every weekend!</span>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Sat &amp; Sun</b>10 AM – 3 PM</span></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=22700+SW+177th+Avenue+Miami+FL+33170" target="_blank" rel="noopener"><b>Mainstreet Acres</b>22700 SW 177th Ave, Miami</a></div>
+          <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><a href="tel:+13052222221"><b>Call us</b>305.222.2221</a></div>
+        </aside>
       </div>
-      <div class="tag" aria-hidden="true"><small>Open</small>Sat &amp; Sun<br>10 – 3</div>
+      <div class="scroll-cue" aria-hidden="true"></div>
     </section>
 
-    <!-- Ticker -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>Fresh produce</span><span class="dot">✿</span><span>Sourdough &amp; pastries</span><span class="dot">✿</span><span>Local honey</span><span class="dot">✿</span><span>Farm eggs &amp; cheese</span><span class="dot">✿</span><span>Handmade candles</span><span class="dot">✿</span><span>Natural skincare</span><span class="dot">✿</span><span>Plants &amp; flowers</span><span class="dot">✿</span>
-        <span>Fresh produce</span><span class="dot">✿</span><span>Sourdough &amp; pastries</span><span class="dot">✿</span><span>Local honey</span><span class="dot">✿</span><span>Farm eggs &amp; cheese</span><span class="dot">✿</span><span>Handmade candles</span><span class="dot">✿</span><span>Natural skincare</span><span class="dot">✿</span><span>Plants &amp; flowers</span><span class="dot">✿</span>
+    <div class="awning" aria-hidden="true"></div>
+
+    <!-- Velocity marquee -->
+    <section class="marquee" aria-label="What you'll find">
+      <div class="marquee-track">
+        <span>Fresh produce</span><span>Sourdough &amp; pastries</span><span>Local honey</span><span>Farm eggs &amp; cheese</span><span>Handmade candles</span><span>Natural skincare</span><span>Plants &amp; flowers</span>
+        <span aria-hidden="true">Fresh produce</span><span aria-hidden="true">Sourdough &amp; pastries</span><span aria-hidden="true">Local honey</span><span aria-hidden="true">Farm eggs &amp; cheese</span><span aria-hidden="true">Handmade candles</span><span aria-hidden="true">Natural skincare</span><span aria-hidden="true">Plants &amp; flowers</span>
       </div>
-    </div>
+    </section>
 
     <!-- Market days -->
-    <section class="section" id="markets">
+    <section id="markets">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Weekend markets</p>
-          <h2>Two market days. <span class="script">Pick yours.</span></h2>
-          <p class="lede">Sell one day or both. Register for the day that fits your business.</p>
+        <div class="head">
+          <div>
+            <p class="kicker" data-reveal>Weekend markets</p>
+            <h2 data-reveal>Two market days. <span class="script" style="color:var(--leaf)">Pick yours.</span></h2>
+          </div>
+          <p data-reveal>Sell one day or both. Register for the day that fits your business.</p>
         </div>
         <div class="markets">
-          <article class="market-card reveal">
-            <div class="market-media">
-              <img src="https://images.unsplash.com/photo-1506484381205-f7945653044d?w=1000&amp;q=75&amp;auto=format&amp;fit=crop" alt="Farm stand with baskets of vegetables and a chalkboard sign" loading="lazy" width="1000" height="667">
+          <article class="market-card" data-reveal>
+            <div class="market-media" data-clip>
+              <img src="assets/img/farm-stand.webp" alt="Farm stand with baskets of vegetables and a chalkboard sign" loading="lazy" width="1100" height="733">
               <span class="day-badge">Sat</span>
             </div>
             <div class="market-body">
@@ -102,13 +122,13 @@
               <p>Start the weekend on the farm. Families come out early for fresh produce, baked goods, and a morning outdoors.</p>
               <div class="market-actions">
                 <a class="btn btn-ghost" href="mailto:stephanie@cmgproducts.net?subject=Saturday%20Market%20vendor%20info">More info</a>
-                <a class="btn btn-primary" href="apply.html?day=Saturday">Register <span class="arrow" aria-hidden="true">→</span></a>
+                <a class="btn" href="apply.html?day=Saturday" data-magnetic>Register <span class="arrow" aria-hidden="true">→</span></a>
               </div>
             </div>
           </article>
-          <article class="market-card reveal">
-            <div class="market-media">
-              <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1000&amp;q=75&amp;auto=format&amp;fit=crop" alt="Crates of fresh fruit and vegetables at a market stall" loading="lazy" width="1000" height="667">
+          <article class="market-card" data-reveal>
+            <div class="market-media" data-clip>
+              <img src="assets/img/produce.webp" alt="Crates of fresh fruit and vegetables at a market stall" loading="lazy" width="1100" height="733">
               <span class="day-badge">Sun</span>
             </div>
             <div class="market-body">
@@ -123,7 +143,7 @@
               <p>A relaxed Sunday crowd that likes to browse. A great day for crafts, gifts, specialty foods, and treats.</p>
               <div class="market-actions">
                 <a class="btn btn-ghost" href="mailto:stephanie@cmgproducts.net?subject=Sunday%20Market%20vendor%20info">More info</a>
-                <a class="btn btn-primary" href="apply.html?day=Sunday">Register <span class="arrow" aria-hidden="true">→</span></a>
+                <a class="btn" href="apply.html?day=Sunday" data-magnetic>Register <span class="arrow" aria-hidden="true">→</span></a>
               </div>
             </div>
           </article>
@@ -131,14 +151,17 @@
       </div>
     </section>
 
-    <!-- Intro -->
-    <section class="section">
+    <!-- Rooted in the Redland -->
+    <section class="paper-grain" style="padding-top:0">
       <div class="wrap split">
-        <h2 class="reveal">Rooted in the Redland.</h2>
-        <div class="reveal">
-          <p class="lede">Mainstreet Acres Farmers Market brings local businesses, farmers, artisans, and entrepreneurs together in a fun, family‑friendly atmosphere.</p>
-          <p>We're located in the heart of Miami's Redland agricultural community. That means shoppers who come out on purpose: to buy local, try something new, and make a morning of it. For vendors, it's a place to meet those people face to face, introduce your products, and grow.</p>
-          <ul class="facts">
+        <div>
+          <h2 class="big-title" data-drift="-10">Rooted in the <em>Redland.</em></h2>
+          <div class="photo" data-reveal style="aspect-ratio:4/3"><img data-clip src="assets/img/farm-stand.webp" alt="Baskets of fresh vegetables at a farm stand" loading="lazy"><span class="stamp">Fresh made ♡</span></div>
+        </div>
+        <div>
+          <p class="lead" data-reveal>Mainstreet Acres Farmers Market brings local businesses, farmers, artisans, and entrepreneurs together in a fun, family‑friendly atmosphere.</p>
+          <p data-reveal>We're located in the heart of Miami's Redland agricultural community. That means shoppers who come out on purpose: to buy local, try something new, and make a morning of it. For vendors, it's a place to meet those people face to face, introduce your products, and grow.</p>
+          <ul class="facts" data-reveal>
             <li><b>Who</b><span>Farmers, cottage bakers, specialty food makers, artisans, and local businesses.</span></li>
             <li><b>When</b><span>Every Saturday &amp; Sunday, 10 AM – 3 PM.</span></li>
             <li><b>Where</b><span>22700 SW 177th Avenue, Miami, FL 33170.</span></li>
@@ -147,91 +170,66 @@
       </div>
     </section>
 
-    <!-- Who we welcome -->
-    <section class="section on-kraft" id="welcome">
+    <!-- Who we welcome: seed packets that open on hover -->
+    <section class="on-kraft" id="welcome">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Who we welcome</p>
-          <h2>Seven kinds of stalls. <span class="script">One</span> good market.</h2>
-          <p class="lede">We're looking for a healthy mix, so shoppers find something new at every table.</p>
+        <div class="head">
+          <div>
+            <p class="kicker" data-reveal>Who we welcome</p>
+            <h2 data-reveal>Seven kinds of stalls.<br><span class="script" style="color:var(--honey)">One</span> good market.</h2>
+          </div>
+          <p data-reveal>We keep a healthy mix, so shoppers find something new at every table. Hover a packet to open it.</p>
         </div>
-
-        <div class="packets">
-          <article class="packet c-forest reveal">
-            <div class="packet-top"><span class="packet-no">No. 01</span><h3>Farmers &amp; Growers</h3></div>
-            <div class="packet-body"><p>Fresh fruits, vegetables, herbs, plants, and flowers.</p></div>
-          </article>
-          <article class="packet c-honey reveal">
-            <div class="packet-top"><span class="packet-no">No. 02</span><h3>Cottage Bakeries</h3></div>
-            <div class="packet-body"><p>Artisan breads, sourdough, cookies, cakes, pastries, and homemade baked goods.</p></div>
-          </article>
-          <article class="packet c-tomato reveal">
-            <div class="packet-top"><span class="packet-no">No. 03</span><h3>Specialty Foods</h3></div>
-            <div class="packet-body"><p>Honey, jams, sauces, dips, spreads, spices, and other locally made products.</p></div>
-          </article>
-          <article class="packet c-berry reveal">
-            <div class="packet-top"><span class="packet-no">No. 04</span><h3>Dairy &amp; Farm</h3></div>
-            <div class="packet-body"><p>Cheese, milk, eggs, and other locally sourced farm products.</p></div>
-          </article>
-          <article class="packet c-hay reveal">
-            <div class="packet-top"><span class="packet-no">No. 05</span><h3>Arts &amp; Crafts</h3></div>
-            <div class="packet-body"><p>Handmade jewelry, candles, pottery, home décor, artwork, and unique gifts.</p></div>
-          </article>
-          <article class="packet c-forest reveal">
-            <div class="packet-top"><span class="packet-no">No. 06</span><h3>Health &amp; Wellness</h3></div>
-            <div class="packet-body"><p>Natural skincare, handmade soaps, and wellness products.</p></div>
-          </article>
-          <article class="packet c-ink reveal">
-            <div class="packet-top"><span class="packet-no">No. 07</span><h3>Local Businesses</h3></div>
-            <div class="packet-body"><p>Unique products and specialty vendors that complement the market experience.</p></div>
-          </article>
-          <article class="packet cta reveal">
-            <h3>Don't see your thing?</h3>
-            <p>If it's local, well made, and fits a family market, tell us about it.</p>
-            <a class="btn btn-primary" href="apply.html">Apply anyway <span class="arrow" aria-hidden="true">→</span></a>
-          </article>
+        <div class="packets" data-reveal>
+          <article class="packet c-forest" tabindex="0"><span class="p-icon" aria-hidden="true">🥕</span><span class="p-no">No. 01</span><h3>Farmers &amp; Growers</h3><div class="p-body"><h4>Farmers &amp; Growers</h4><p>Fresh fruits, vegetables, herbs, plants, and flowers.</p></div></article>
+          <article class="packet c-honey" tabindex="0"><span class="p-icon" aria-hidden="true">🥖</span><span class="p-no">No. 02</span><h3>Cottage Bakeries</h3><div class="p-body"><h4>Cottage Bakeries</h4><p>Artisan breads, sourdough, cookies, cakes, pastries, and homemade baked goods.</p></div></article>
+          <article class="packet c-tomato" tabindex="0"><span class="p-icon" aria-hidden="true">🍯</span><span class="p-no">No. 03</span><h3>Specialty Foods</h3><div class="p-body"><h4>Specialty Foods</h4><p>Honey, jams, sauces, dips, spreads, spices, and other locally made products.</p></div></article>
+          <article class="packet c-berry" tabindex="0"><span class="p-icon" aria-hidden="true">🧀</span><span class="p-no">No. 04</span><h3>Dairy &amp; Farm</h3><div class="p-body"><h4>Dairy &amp; Farm</h4><p>Cheese, milk, eggs, and other locally sourced farm products.</p></div></article>
+          <article class="packet c-hay" tabindex="0"><span class="p-icon" aria-hidden="true">🕯️</span><span class="p-no">No. 05</span><h3>Arts &amp; Crafts</h3><div class="p-body"><h4>Arts &amp; Crafts</h4><p>Handmade jewelry, candles, pottery, home décor, artwork, and unique gifts.</p></div></article>
+          <article class="packet c-leaf" tabindex="0"><span class="p-icon" aria-hidden="true">🌿</span><span class="p-no">No. 06</span><h3>Health &amp; Wellness</h3><div class="p-body"><h4>Health &amp; Wellness</h4><p>Natural skincare, handmade soaps, and wellness products.</p></div></article>
+          <article class="packet c-ink" tabindex="0"><span class="p-icon" aria-hidden="true">🛍️</span><span class="p-no">No. 07</span><h3>Local Businesses</h3><div class="p-body"><h4>Local Businesses</h4><p>Unique products and specialty vendors that complement the market experience.</p></div></article>
         </div>
-
-        <div class="notice">
+        <div class="notice" data-reveal>
           <div class="seal" aria-hidden="true">Florida<br>licensed</div>
-          <p><strong>A note for food &amp; dairy vendors:</strong> all food and dairy vendors must comply with applicable Florida regulations and licensing requirements. <a href="vendors.html#requirements">See vendor requirements</a>.</p>
+          <p><strong>A note for food &amp; dairy vendors:</strong> all food and dairy vendors must comply with applicable Florida regulations and licensing requirements. <a href="vendors.html#requirements">See vendor requirements</a>. Don't see your thing? <a href="apply.html">Apply anyway</a>.</p>
         </div>
       </div>
     </section>
 
     <!-- Why join -->
-    <section class="section on-forest" id="why">
-      <div class="wrap why-grid">
-        <div>
-          <p class="eyebrow">Why join our market</p>
-          <p class="pull">We're building more than a farmers market. We're building a <em>community destination.</em></p>
-          <p class="lede">A place where families shop local, enjoy the outdoors, discover unique products, and support small businesses. Whether you're established or just getting started, there's room to grow here.</p>
-        </div>
+    <section class="on-forest" id="why">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Why join our market</p>
+        <p class="statement">We're building more than a farmers market. We're building a <em>community destination.</em></p>
+        <p class="lead" data-reveal style="margin-bottom:50px">A place where families shop local, enjoy the outdoors, discover unique products, and support small businesses. Whether you're established or just getting started, there's room to grow here.</p>
         <div class="benefits">
-          <div class="benefit"><span class="n">01</span><h3>Two market days</h3><p>Saturday and Sunday, every week. More chances to sell.</p></div>
-          <div class="benefit"><span class="n">02</span><h3>Real local shoppers</h3><p>Families from the Redland and beyond who came to buy local.</p></div>
-          <div class="benefit"><span class="n">03</span><h3>Build your brand</h3><p>Get your name, your product, and your story in front of new faces.</p></div>
-          <div class="benefit"><span class="n">04</span><h3>A growing community</h3><p>Join neighbors and fellow makers who want each other to win.</p></div>
+          <div class="benefit" data-reveal><span class="n">01</span><h3>Two market days</h3><p>Saturday and Sunday, every week. More chances to sell.</p></div>
+          <div class="benefit" data-reveal><span class="n">02</span><h3>Real local shoppers</h3><p>Families from the Redland and beyond who came to buy local.</p></div>
+          <div class="benefit" data-reveal><span class="n">03</span><h3>Build your brand</h3><p>Get your name, your product, and your story in front of new faces.</p></div>
+          <div class="benefit" data-reveal><span class="n">04</span><h3>A growing community</h3><p>Join neighbors and fellow makers who want each other to win.</p></div>
         </div>
       </div>
     </section>
 
     <!-- Market details -->
-    <section class="section" id="visit">
+    <section id="visit">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Market details</p>
-          <h2>Find us on the farm.</h2>
+        <div class="head">
+          <div>
+            <p class="kicker" data-reveal>Market details</p>
+            <h2 data-reveal>Find us on the <em>farm.</em></h2>
+          </div>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=22700+SW+177th+Avenue+Miami+FL+33170" target="_blank" rel="noopener" data-reveal>Get directions <span class="arrow" aria-hidden="true">→</span></a>
         </div>
         <div class="details-grid">
-          <div class="chalkboard">
+          <div class="chalkboard" data-reveal>
             <h2>Every weekend!</h2>
             <div class="chalk-row"><span>When</span>Every Saturday &amp; Sunday<br>10 AM – 3 PM</div>
-            <div class="chalk-row"><span>Where</span><a href="https://www.google.com/maps/search/22700+SW+177th+Avenue+Miami,+FL+33170" target="_blank" rel="noopener">Mainstreet Acres<br>22700 SW 177th Avenue<br>Miami, FL 33170</a></div>
+            <div class="chalk-row"><span>Where</span><a href="https://www.google.com/maps/search/?api=1&amp;query=22700+SW+177th+Avenue+Miami+FL+33170" target="_blank" rel="noopener">Mainstreet Acres<br>22700 SW 177th Avenue<br>Miami, FL 33170</a></div>
             <div class="chalk-row"><span>Say hi</span><a href="https://instagram.com/mainstreetacres" target="_blank" rel="noopener">@mainstreetacres</a></div>
             <div class="chalk-heart" aria-hidden="true">♡</div>
           </div>
-          <div class="map">
+          <div class="map" data-clip>
             <iframe title="Map to Mainstreet Acres, 22700 SW 177th Avenue, Miami FL" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=22700+SW+177th+Avenue,+Miami,+FL+33170&amp;output=embed"></iframe>
           </div>
         </div>
@@ -239,57 +237,59 @@
     </section>
 
     <!-- CTA -->
-    <section class="cta-band on-kraft">
-      <div class="wrap">
-        <p class="eyebrow" style="justify-content:center">Ready to join us?</p>
-        <h2>Save your spot at <span class="script">the market.</span></h2>
-        <p class="lede">We're always looking for passionate vendors who bring quality, creativity, and something special. Fill out the vendor registration form and we'll be in touch.</p>
-        <a class="btn btn-hay" href="apply.html">Start your application <span class="arrow" aria-hidden="true">→</span></a>
-        <p class="fine">Vendor participation is subject to approval and availability.</p>
+    <section class="cta-section">
+      <div class="cta">
+        <canvas class="gradient" aria-hidden="true"></canvas>
+        <img src="assets/logo.webp" alt="" width="380" height="253" data-reveal>
+        <div data-reveal>
+          <p class="kicker" style="color:var(--forest)">Ready to join us?</p>
+          <h2>Save your spot at <span class="script">the market.</span></h2>
+          <p>We're always looking for passionate vendors who bring quality, creativity, and something special. Fill out the vendor registration form and we'll be in touch.</p>
+          <a class="btn" href="apply.html" data-magnetic>Start your application <span class="arrow" aria-hidden="true">→</span></a>
+          <p class="fine" style="margin-top:16px;color:var(--forest)">Vendor participation is subject to approval and availability.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div>
-          <img class="footer-logo" src="assets/logo.webp" alt="The Farmers Market at Mainstreet Acres">
-          <p class="footer-tag">Shop local. Grow local.</p>
-        </div>
-        <div>
-          <h4>Market</h4>
-          <ul>
-            <li>Sat &amp; Sun · 10 AM – 3 PM</li>
-            <li><a href="https://www.google.com/maps/search/22700+SW+177th+Avenue+Miami,+FL+33170" target="_blank" rel="noopener">22700 SW 177th Avenue<br>Miami, FL 33170</a></li>
-            <li><a href="about.html">About us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:stephanie@cmgproducts.net">stephanie@cmgproducts.net</a></li>
-            <li><a href="tel:+13052222221">305.222.2221</a></li>
-            <li><a href="https://instagram.com/mainstreetacres" target="_blank" rel="noopener">Instagram @mainstreetacres</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Vendors</h4>
-          <ul>
-            <li><a href="vendors.html">Who we welcome</a></li>
-            <li><a href="vendors.html#requirements">Requirements</a></li>
-            <li><a href="vendors.html#faq">FAQ</a></li>
-            <li><a href="apply.html">Apply to vend</a></li>
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/logo.webp" alt="The Farmers Market at Mainstreet Acres">
+        <p class="footer-tag">Shop local. Grow local.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> The Farmers Market at Mainstreet Acres</span>
-        <span>Miami's Redland · Florida</span>
+      <div>
+        <h4>Market</h4>
+        <ul>
+          <li>Sat &amp; Sun · 10 AM – 3 PM</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=22700+SW+177th+Avenue+Miami+FL+33170" target="_blank" rel="noopener">22700 SW 177th Avenue<br>Miami, FL 33170</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:stephanie@cmgproducts.net">stephanie@cmgproducts.net</a></li>
+          <li><a href="tel:+13052222221">305.222.2221</a></li>
+          <li><a href="https://instagram.com/mainstreetacres" target="_blank" rel="noopener">Instagram @mainstreetacres</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Vendors</h4>
+        <ul>
+          <li><a href="vendors.html">Who we welcome</a></li>
+          <li><a href="vendors.html#requirements">Requirements</a></li>
+          <li><a href="vendors.html#faq">FAQ</a></li>
+          <li><a href="apply.html">Apply to vend</a></li>
+        </ul>
       </div>
     </div>
+    <div class="footer-word" aria-hidden="true">Shop local. Grow local.</div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> The Farmers Market at Mainstreet Acres</span><span>Miami's Redland · Florida</span></div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
